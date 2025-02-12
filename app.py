@@ -16,6 +16,10 @@ def predicted_DBS():
     q = float(request.form.get("q"))
     return(render_template("predicted_DBS.html",r=(-50.6*q)+90.2))
 
+@app.route("/congratulations", methods=["GET","POST"])
+def congratulations():
+    return(render_template("congratulations.html"))
+
 if __name__ == "__main__":
     app.run()
     
