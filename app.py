@@ -2,6 +2,7 @@ from flask import Flask
 from flask import render_template,request
 import textblob
 
+
 app = Flask(__name__)
 
 @app.route("/", methods=["GET","POST"])
@@ -30,6 +31,10 @@ def sentiment_result():
 @app.route("/congratulations", methods=["GET","POST"])
 def congratulations():
     return(render_template("congratulations.html"))
+
+@app.route("/paynow", methods=["GET","POST"])
+def paynow():
+    return(render_template("paynow.html"))
 
 if __name__ == "__main__":
     app.run()
